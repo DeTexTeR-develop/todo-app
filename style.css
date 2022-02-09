@@ -37,3 +37,50 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.title{
+    color:white;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.newTodo{
+    background-color: hsl(235, 24%, 19%);
+    height: 70px;
+    margin: 50px;
+    border-radius: 6px;
+    display: flex;
+}
+.check{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.checkmark{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(233, 14%, 35%);
+}
+.checkmark:hover{
+    background-color: linear-gradient(134deg,#55DDFF, 0%, #C058F3,100%);
+}
+.newTodoInput{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.newTodoInput form{
+    flex-grow: 1;
+}
+.newTodoInput input{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: transparent;
+    border: none;
+    outline: none ;
+}
+.newTodoInput input::placeholder{
+    color: hsl(233, 14%, 35%);
+}
