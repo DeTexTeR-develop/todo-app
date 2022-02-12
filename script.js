@@ -35,7 +35,7 @@ function generateItems(items){
         itemsHTML += `
             <div class="todoItem" >
                 <div class="check">
-                    <div class="checkmark">
+                    <div data-id = "${item.id}" class="checkmark">
                         <img src="./assets/icon-check.svg" alt="Icon for check">
                     </div>
                 </div>
@@ -47,7 +47,34 @@ function generateItems(items){
         `
     })
     document.querySelector(".todoItems").innerHTML = itemsHTML;
+    createEventListeners();
+}
+function createEventListeners(){
+    let todoCheckMarks = document.querySelectorAll(".todoItem .checkmark")
+    todoCheckMarks.forEach((checkmark)=>{
+        checkmark.addEventListener('click', function(){
+            markCompleted(checkmark.dataset.id);
+        })
+    })
 }
 
+function markCompleted(id){
+    // coming from a database
+   let itemDb = db.collection("todo-items").doc(id)
+    itemDb.get().then(function(doc){
+        if(doc.exists){
+            let status = doc.data().status;
+            if(status == "active"){
+                item.update({
+                    status:"completed"
+                })
+            }else if(status == "completed"){
+                item.update({
+                    status: "active"
+                })
+            }
+        }
+    })
+}
 getItems();
 
