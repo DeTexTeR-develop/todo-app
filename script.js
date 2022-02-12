@@ -65,11 +65,11 @@ function markCompleted(id){
         if(doc.exists){
             let status = doc.data().status;
             if(status == "active"){
-                item.update({
+                itemDb.update({
                     status:"completed"
                 })
             }else if(status == "completed"){
-                item.update({
+                itemDb.update({
                     status: "active"
                 })
             }
