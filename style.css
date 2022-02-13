@@ -68,8 +68,12 @@ body{
     align-items: center;
     justify-content: center;
 }
-.checkmark:hover{
+.checkmark:hover, .checkmark.checked{
     background-color: rgb(11, 169, 241);
+}
+
+.todoText.checked{
+    color: hsl(233, 14%, 35%);
 }
 .newTodoInput{
     flex-grow: 1;
