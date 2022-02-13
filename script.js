@@ -13,6 +13,7 @@ submit.addEventListener('submit', function(e){
     todoInput.value = "";
 }) 
 
+
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot)=>{
         console.log(snapshot);
@@ -27,6 +28,7 @@ function getItems(){
     })
 }
 
+
 function generateItems(items){
 
     let itemsHTML = "";
@@ -35,11 +37,11 @@ function generateItems(items){
         itemsHTML += `
             <div class="todoItem" >
                 <div class="check">
-                    <div data-id = "${item.id}" class="checkmark">
+                    <div data-id = "${item.id}" class="checkmark ${item.status == "completed" ? "checked" : ""}">
                         <img src="./assets/icon-check.svg" alt="Icon for check">
                     </div>
                 </div>
-                <div class="todoText">
+                <div class="todoText ${item.status == "completed" ? "checked" : ""}">
                     ${item.Text}
                 </div>
             </div>
@@ -49,6 +51,8 @@ function generateItems(items){
     document.querySelector(".todoItems").innerHTML = itemsHTML;
     createEventListeners();
 }
+
+
 function createEventListeners(){
     let todoCheckMarks = document.querySelectorAll(".todoItem .checkmark")
     todoCheckMarks.forEach((checkmark)=>{
@@ -57,6 +61,7 @@ function createEventListeners(){
         })
     })
 }
+
 
 function markCompleted(id){
     // coming from a database
