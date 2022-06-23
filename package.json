@@ -1,0 +1,25 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeTexTeR-develop/todo-app.git"
+  },
+  "author": "Ujjwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeTexTeR-develop/todo-app/issues"
+  },
+  "homepage": "https://github.com/DeTexTeR-develop/todo-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-overload": "^0.1.1",
+    "method-override": "^3.0.0"
+  }
+}

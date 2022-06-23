@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/public/css/style.css" rel="stylesheet" type="text/css">
+    <title>To-do app</title> 
+</head>
+<body>
+    <div class="bgImage">
+        <img src="/public/img/bg-desktop-dark.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+        </div>
+        <div class="newTodo ">
+            <div class="check">
+                <div class="checkmark">
+
+                </div>
+            </div>
+            <div class="newTodoInput">
+                <form id="form">
+                    <input type="text" placeholder="Create a new To-do" id="inputInTodo"/>
+                </form>                
+            </div>
+        </div>
+        <div class="todoItemsWrapper">
+            <div class="todoItems" id="todoItems">
+                <div class="todoItem" >
+                    <div class="check">
+                        <div class="checkmark">
+                            <img id="icon" src="/public/img/checkmark-png-25959.png" alt="Icon for check">
+                        </div>
+                    </div>
+                    <div class="todoText">
+                        cut the lawn
+                    </div>
+                </div>
+                <div class="todoItem" >
+                    <div class="check">
+                        <div class="checkmark">
+                            <img id="icon" src="/public/img/checkmark-png-25959.png" alt="Icon for check">
+                        </div>
+                    </div>
+                    <div class="todoText">
+                        cut the lawn
+                    </div>
+                </div>
+                <div class="todoItem" >
+                    <div class="check">
+                        <div class="checkmark">
+                            <img id="icon" src="/public/img/checkmark-png-25959.png" alt="Icon for check">
+                        </div>
+                    </div>
+                    <div class="todoText">
+                        cut the lawn
+                    </div>
+                </div>
+            </div>
+            <div class="todoItemsInfo">
+                <div class="itemsLeft">
+                    5 items left
+                </div>
+                <div class="itemsStatus">
+                    <span class="active">All</span>
+                    <span>Active</span>
+                    <span>completed</span>
+                </div>
+                <div class="itemsClear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/public/js/script.js"></script>
+</html>
